@@ -1,0 +1,10 @@
+# Arquivos do nwg-displays
+monitors.conf
+workspaces.conf
+
+# Backups
+*.bkp
+
+# Non shared
+*_playground*
+
