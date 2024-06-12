@@ -1,10 +1,16 @@
 # Hyprland
-
-[![hypr preview](https://img.youtube.com/vi/nxlKxQ4VXfA/0.jpg)](https://youtu.be/nxlKxQ4VXfA)
-
 ### Useful Links:
   * [Hyprland Doc](https://wiki.hyprland.org/Getting-Started/Master-Tutorial/)
   * [Arch Wiki](https://wiki.archlinux.org/title/Hyprland)
+
+### Preview
+<div align="center">
+<img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYjJ7-1HYM2IwJKrb2GpuLuuvubKaoYgS6A1ethpUA3Fnilgh9pxUYDwO-byiXqGBt501a7S1vkzroRgZsvB3zdNjpr9fRhFuY=w3840-h1660-rw-v1" style="width:92%" />
+<img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihY4FVoXhnxpyOj6huFAmas7M0GLRPTkSFy_ocPcVejZLOeGU-keiNDWB-A4r3yb-3eDXkLgDm8s9V2YHucT5-Wzi9sbS0sxmw=w2782-h1390-rw-v1" alt="Imagem 1" style="width:92%">
+<img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaRoXz6QX3EB-r6VGj22Ygz930_D4k0gVESdnVlNZyNhh2YsVf8NsPHtYUTXuJSVyjaV9V9QiWblFk0Xc5P-O1Kxtse1jWWpg=w2880-h1662-rw-v1" alt="Imagem 2" style="width:92%">
+<img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYSrhhcNbulLE7skvsmL_zf-evgX8vpC4TRU5ghc4zNgvR_mIJALigKL9U5H_PoIereMk8wmSRXvRNE71a0wjZDci_MaMnFjA=w3362-h1914-rw-v1" alt="Imagem 3" style="width:80%">
+<a href="https://youtu.be/nxlKxQ4VXfA"><img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcm1jdzFvYWZveTJjaHNmcDV6djMxbXYzaHhyNnV0cWV3cmd6NXRkaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TyoacpYV4ujbcJc6oB/giphy-downsized-large.gif" alt="hypr preview"></a> <p> Click on the gif to see a preview video. </p>
+</div>
 
 ### How to install
   * Dependencies: `gtk3` `mesa` `systemd` `wayland`
