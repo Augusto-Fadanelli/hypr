@@ -1,17 +1,29 @@
 # Hyprland
 
+[![hypr preview](https://img.youtube.com/vi/nxlKxQ4VXfA/0.jpg)](https://youtu.be/nxlKxQ4VXfA)
+
 ### Useful Links:
   * [Hyprland Doc](https://wiki.hyprland.org/Getting-Started/Master-Tutorial/)
   * [Arch Wiki](https://wiki.archlinux.org/title/Hyprland)
 
 ### How to install
-  * Dependencies: `ddcutil` `go` `gtk3` `gtk-layer-shell` `mako` `mesa` `polkit-kde-agent` `qt5-wayland` `qt6-wayland` `systemd` `wayland` `wayland-protocols` `xdg-utils`
+  * Dependencies: `gtk3` `mesa` `systemd` `wayland`
     
   * Packages:
     ````
-    $ sudo pacman -S hyprland waybar kitty sddm hyprpaper nwg-look qt5ct qt6ct thunar gvfs grim slurp wl-clipboard alsa-utils alsa-firmware pulseaudio pulseaudio-alsa pavucontrol neofetch lolcat wofi eog vlc ttf-hack deepin-screenshot unzip
+    $ sudo pacman -S ddcutil go gtk-layer-shell mako polkit-kde-agent qt5-wayland qt6-wayland wayland-protocols xdg-utils hyprland waybar kitty sddm hyprpaper hyprlock nwg-look qt5ct qt6ct gvfs grim slurp wl-clipboard alsa-utils alsa-firmware pulseaudio pulseaudio-alsa pavucontrol neofetch lolcat wofi otf-font-awesome ttf-hack deepin-screenshot unzip
     $ yay -S nwg-displays nwg-drawer qt5-styleplugins
+    $ sudo systemctl enable sddm
     ````
+    * My favorite GTK themes (Feel free to install others):
+      ````
+      $ sudo pacman -S arc-gtk-theme papirus-icon-theme
+      ````
+    * My office and multimedia apps (You can change this, but you may need to change some configs in hyprland.conf):
+      ````
+      $ sudo pacman -S eog evince firefox gnome-mplayer gparted kate qbittorrent thunar vlc
+      $ yay -S spotify
+      ````
     * Wifi:
       ````
       $ sudo pacman -S wireless_tools iwd
@@ -39,10 +51,11 @@
       ````
       $ sudo pacman -S mesa mesa-utils libva libva-mesa-driver libva-utils
       ````
+    * Tip: Use the hwinfo tool to see your hardware specs. Ex.: `hwinfo --short`
 
   * Clone this repository:
     ````
-    $ git clone https://github.com/Augusto-Fadanelli/hypr.git ~/.config/
+    $ git clone https://github.com/Augusto-Fadanelli/hypr.git ~/.config/hypr
     $ cd ~/.config/hypr/
     ````
 
@@ -81,7 +94,7 @@
 ### How to Configure Kitty Terminal 
   * Copy config file:
     ````
-    $ cp /usr/share/doc/kitty/kitty.conf ~/.config/kitty
+    $ mkdir -p ~/.config/kitty/ && cp /usr/share/doc/kitty/kitty.conf ~/.config/kitty/kitty.conf
     ````
 
 ### Configure nwg-drawer
