@@ -1,7 +1,8 @@
 # Hyprland
 ### Useful Links:
   * [Hyprland Doc](https://wiki.hyprland.org/Getting-Started/Master-Tutorial/)
-  * [Arch Wiki](https://wiki.archlinux.org/title/Hyprland)
+  * [Hyprland - ArchWiki](https://wiki.archlinux.org/title/Hyprland)
+  * [Kitty Documentation](https://sw.kovidgoyal.net/kitty/)
 
 ### Preview
 <div align="center">
@@ -17,8 +18,8 @@
     
   * Packages:
     ````
-    $ sudo pacman -S ddcutil go gtk-layer-shell mako polkit-kde-agent qt5-wayland qt6-wayland wayland-protocols xdg-utils hyprland waybar kitty sddm hyprpaper hyprlock nwg-look qt5ct qt6ct gvfs grim slurp wl-clipboard alsa-utils alsa-firmware pulseaudio pulseaudio-alsa pavucontrol neofetch lolcat wofi otf-font-awesome ttf-hack deepin-screenshot unzip
-    $ yay -S nwg-displays nwg-drawer qt5-styleplugins
+    $ sudo pacman -S ddcutil git go gtk-layer-shell mako polkit-kde-agent qt5-wayland qt6-wayland wayland-protocols xdg-utils hyprland waybar kitty sddm hyprpaper hyprlock nwg-look qt5ct qt6ct gvfs grim slurp wl-clipboard alsa-utils alsa-firmware pulseaudio pulseaudio-alsa pavucontrol neofetch onefetch lolcat wofi otf-font-awesome ttf-hack ttf-nerd-fonts-symbols-mono ttf-dejavu-nerd deepin-screenshot unzip zsh
+    $ yay -S nwg-displays nwg-drawer qt5-styleplugins ttf-material-design-icons-extended
     $ sudo systemctl enable sddm
     ````
     * My favorite GTK themes (Feel free to install others):
@@ -100,8 +101,70 @@
 ### How to Configure Kitty Terminal 
   * Copy config file:
     ````
-    $ mkdir -p ~/.config/kitty/ && cp /usr/share/doc/kitty/kitty.conf ~/.config/kitty/kitty.conf
+    $ mkdir -p ~/.config/kitty/ && ln kitty/kitty.conf ~/.config/kitty/kitty.conf && ln kitty/diff.conf ~/.config/kitty/diff.conf
     ````
+
+  * zsh
+    * Install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/wiki):
+      ````
+      $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+      ````
+    * Install plugins:
+      ````
+      $ git clone https://github.com/zsh-users/zsh-history-substring-search.git ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search
+      $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+      $ git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+      ````
+    * Edit `~/.zshrc`
+      * Choose the theme you want. I will use `gnzh`:
+        ````
+        ZSH_THEME="gnzh"
+        ````
+      * Add plugins:
+        ````
+        plugins=(git command-not-found zsh-history-substring-search zsh-syntax-highlighting zsh-autosuggestions)
+        ````
+      * I like to use some custom aliases and functions:
+        ````
+        # kitty aliases
+        alias kimg="kitty +kitten icat"
+        alias kdiff="kitty +kitten diff"
+        alias kdiffg="git difftool --no-symlinks --dir-diff"
+
+        UPDATE(){
+            sudo pacman -Syy
+            sudo pacman -Syu
+            yay -Syy
+            yay -Syu
+            flatpak update
+            sudo snap refresh
+        }
+        ````
+      * Enable neofetch to be displayed every time you open the terminal. Just calls `neofetch` on `.zshrc`.
+
+  * Integrating kitty diff with git
+    * Add the following to `~/.gitconfig`:
+      ````
+      [diff]
+          tool = kitty
+          guitool = kitty.gui
+      [difftool]
+          prompt = false
+          trustExitCode = true
+      [difftool "kitty"]
+          cmd = kitten diff $LOCAL $REMOTE
+      [difftool "kitty.gui"]
+          cmd = kitten diff $LOCAL $REMOTE
+      ````
+
+  * Install [neofetch theme](https://github.com/Chick2D/neofetch-themes):
+    ````
+    $ cp ~/.config/neofetch/config.conf ~/.config/neofetch/config.conf.bkp
+    $ git clone https://github.com/Chick2D/neofetch-themes/
+    $ cat neofetch-themes/normal/config2.conf > ~/.config/neofetch/config.conf
+    $ rm -rf neofetch-themes
+    ````
+    * You can set a different ascii distro logo in `~/.config/neofetch/config.conf`. I like `ascii_distro="windows7"`.
 
 ### Configure nwg-drawer
   * Copy config file:
