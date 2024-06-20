@@ -101,7 +101,7 @@
 ### How to Configure Kitty Terminal 
   * Copy config file:
     ````
-    $ mkdir -p ~/.config/kitty/ && ln kitty/kitty.conf ~/.config/kitty/kitty.conf && ln kitty/diff.conf ~/.config/kitty/diff.conf
+    $ cp -al kitty/ ~/.config/
     ````
 
   * zsh
@@ -170,4 +170,23 @@
   * Copy config file:
     ````
     $ ln -f drawer.css ~/.config/nwg-drawer/drawer.css
+    ````
+
+### How to Configure NeoVim (Optional)
+  * Plugins Links:
+    * [Lazy](https://github.com/folke/lazy.nvim)
+    * [Catppuccin](https://github.com/catppuccin/nvim)
+    * [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+    * [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+    * [Neo-Tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+    * [LuaLine](https://github.com/nvim-lualine/lualine.nvim)
+
+  * Install packages:
+    ````
+    $ sudo pacman -S python-pip python-pynvim nodejs fd npm yarn clang
+    ````
+
+  * Copy config files:
+    ````
+    $ cp -al nvim/ ~/.config/
     ````
