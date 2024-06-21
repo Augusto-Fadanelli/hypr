@@ -31,7 +31,7 @@
       $ sudo pacman -S eog evince firefox gnome-mplayer gparted kate qbittorrent thunar vlc
       $ yay -S spotify
       ````
-    * Wifi:
+    * Wi-Fi:
       ````
       $ sudo pacman -S wireless_tools iwd
       $ sudo systemctl disable NetworkManager
@@ -180,6 +180,10 @@
     * [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
     * [Neo-Tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
     * [LuaLine](https://github.com/nvim-lualine/lualine.nvim)
+    * [Mason.nvim](https://github.com/williamboman/mason.nvim)
+    * [Mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
+    * [Nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+    * [Telescope-ui-select.nvim](https://github.com/nvim-telescope/telescope-ui-select.nvim)
 
   * Install packages:
     ````

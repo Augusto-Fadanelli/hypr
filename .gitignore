@@ -1,4 +1,4 @@
-# Arquivos do nwg-displays
+# nwg-displays files
 monitors.conf
 workspaces.conf
 
@@ -7,4 +7,7 @@ workspaces.conf
 
 # Non shared
 *_playground*
+
+# Other files
+.luarc.json
 
